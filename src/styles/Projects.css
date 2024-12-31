@@ -1,0 +1,205 @@
+.projects-page {
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  background-image: url("https://images3.alphacoders.com/134/1347183.png");
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-heading {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1.5s ease-out;
+}
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  max-width: 90%;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.projects-card {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects-card:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  animation: slideUp 0.5s ease;
+}
+
+.projects-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  padding: 20px;
+  text-align: center;
+  animation: slideIn 1s ease;
+}
+
+.projects-content.active {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn:hover {
+  background-color: #ff4747;
+  color: white;
+}
+
+.project-details {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  max-width: 80%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-details p {
+  margin: 10px 0;
+}
+
+.project-details strong {
+  font-weight: bold;
+  color: #444;
+}
+
+.project-image img {
+  height: 130%;
+  width: 92%;
+  max-height: 310px;
+}
+
+
+.project-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.project-rating .rating-label {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-rating .progress-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.project-rating .progress-bar {
+  height: 100%;
+  background-color: #ffd700; /* Gold color */
+  width: 0%; /* Default width, will be adjusted dynamically */
+  transition: width 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.project-rating .rating-score {
+  font-size: 1.2rem;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+.project-rating .rating-score.active {
+  opacity: 1;
+}
+
+.project-rating .rating-score {
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
